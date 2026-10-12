@@ -1,0 +1,116 @@
+/*
+Dark blue: #00407a
+Light blue: #00789c
+light blue opaco: #327699
+
+TEXT
+light blue : #9BCBF6;
+bright blue: #7AC0FF
+light greenblue: #97E0F5
+*/
+
+/*MOBILE TABLET PC*/
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#wrap, .flex, .section, .sub, .margen {
+  border: none ; /*none*/
+}
+
+.margen {
+  width: 93%;
+}
+
+#footer {
+	background-color: #00407a;
+	display: none;
+}
+
+#header {
+  background-color: #00407a;
+}
+
+#logo {
+  margin: auto;
+  height: 40px;  
+  width: 176px;
+}
+
+#header .nav {
+	display: none;
+}
+
+#footer .margen {
+	 padding: 50px 0px;
+}
+
+#footer .margen > .flex {
+	padding: 15px 0px;
+}
+
+#footer h3 {
+  width: 100%; 
+	color: #97E0F5;
+	font-size: 1.3em;
+	margin-bottom: 15px;
+}
+
+#footer ul {
+	width: 100%;
+}
+
+#footer li {
+	list-style-type: none;
+	color: #eee;
+	margin-bottom: 7px;
+}
+
+#footer ul i {
+	color: #fff;
+	font-size: 1.2em; 
+	margin-left: 32px;
+  position: relative;
+	top: -2px;
+}
+
+#footer a {
+	color: #eee;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+#footer .p_rights {
+	font-size: .8em;
+	color: #ddd;
+}
+
+#footer .div_icons {
+	margin-top: 8px;
+	width: 100%;
+}
+
+#footer .div_icons i {
+	color: #eee;
+	font-size: 1.6em;	
+	margin-right: 15px;
+}
+
+#footer .div_img {
+	width: 150px;
+	margin-bottom: 10px;
+}
+
+/*TABLET AND PC ONLY*/
+@media only screen and (min-width: 768px) { 
+
+
+}
+
+
+/*PC ONLY*/
+@media only screen and (min-width: 1200px) { 
+
+  
+}

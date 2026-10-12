@@ -1,0 +1,433 @@
+/*
+Temp 25.1--11/29/25
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+/*this is to avoid going 
+  back to previous pages with left finger
+  slide on Chrome*/
+html, body { 
+  overscroll-behavior-x: none;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  z-index: 1000;
+  user-select: none;
+}
+
+#header .margen {
+  height: 100%;
+  align-content: space-evenly;
+}
+
+#logo {
+  height: 50px;
+  width: 220px;
+  display: flex;
+  align-self: center;
+}
+
+#logo img {
+  width: 100%;
+  height: 100%;
+}
+
+#header nav {
+  display: none;
+}
+
+#boton_menu {
+  color: #003b6f;
+  font-size: 1.5em;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  align-self: center;
+}
+
+#menu_movil {
+  width: 100%;
+  height: 0%;
+  position: fixed;
+  background-color: #111;
+  z-index: 100;
+  transition: all .65s ease-out;
+  padding: 0px 15px;
+  overflow: auto;
+}
+
+#menu_movil a {
+  font-size: 1.2em;
+  border-bottom: 1px solid #333;
+  transition: all .5s ease;
+  opacity: 0;
+  max-width: 900px;
+  margin: auto;
+  display: block; /*anchors are inline*/
+  color: #ddd;
+}
+
+#menu_movil i {
+  width: 20px;
+  color: #327699;
+  margin-right: 12px;
+  text-align: right;
+}
+
+#chbx {
+  display: none;
+}
+
+#chbx:checked ~ #menu_movil { 
+  height: 100%; 
+  padding-top: 90px;
+}  
+
+#chbx:checked ~ #menu_movil a {
+  padding: 10px 0px;
+  opacity: 1;
+}
+
+#wrap {
+  height: 100%;
+  position: relative; 
+  border: 1px solid gold;
+  padding-top: 60px;
+}
+
+.section {
+  position: relative;
+}
+
+.section .margen {
+    padding: 80px 0px;
+}
+
+.section:not(:nth-last-of-type(1)) .margen {
+    border-bottom: 1px solid #ddd;
+}
+
+.margen {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  border: 1px solid #1576B5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  width: 100%;
+  font-weight: normal;
+}
+
+.section button {
+  cursor: pointer;
+  background-color: #327699;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  transition: all .5s ease;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.section button:hover {
+  background-color: #313d75;
+}
+
+.section button:active {
+  top: 1px;
+}
+
+p {
+  width: 100%;
+}
+
+p , li {
+    font-size: 1.3em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#footer {
+  min-height: 200px;
+  background-color: #003b6f;
+  color: #eee;
+  position: relative;
+}
+
+#footer .icons_div {
+  width: 100%;
+  justify-content: center;
+}
+
+#footer i {
+  font-size: 1.5em;
+}
+
+#footer .isotipo { /*.div_img*/
+  width: 30px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.section img {
+    object-fit: cover;
+}
+
+.div_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.detras {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #111;
+  opacity: .3;
+}
+
+.flexbox {
+  display:  flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex, .sub {
+  width: 100%;
+  position: relative;
+  display:  flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-self: flex-start;
+  border: 1px dotted red;
+}
+
+ /*nuevo*/
+.section .flex:not(:nth-last-of-type(1)), 
+.section .sub:not(:nth-last-of-type(1)) {
+  margin-bottom: 20px;
+}
+
+.sub { 
+  border: 1px dotted darkorchid;
+}
+
+#whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #40c351;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#whats a i {
+  color: #fff;
+  font-size: 2em;
+}
+
+.borde {
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  cursor: pointer;
+}
+ 
+/* Línea superior oculta inicialmente */
+.borde::before {
+  content: "";
+  position: absolute;
+  top: 0;            /* ahora arriba */
+  left: 0;
+  width: 0%;         /* empieza en 0 */
+  height: 5px;       /* grosor del borde */
+  background: #337699;  /* color del borde */
+  transition:  0.7s ease;
+}
+ 
+/* En hover se dibuja hacia la derecha */
+.borde:hover::before {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    
+  .flex2, .sub2 { width: calc(50% - 10px); /*nuevo*/ }
+  
+  .flex3, .sub3 { width: calc(33.33% - 12px); }
+  
+  .flex4, .sub4 { width: calc(50% - 10px) }
+    
+  .flex, .sub {
+    padding: initial;  /*10px*/
+  }  
+  
+  .section .margen > .flex:nth-last-of-type(2) {
+      margin-bottom: initial;
+  }  
+  
+  .section .margen > .flex5:nth-last-of-type(2) {
+    margin-bottom: 20px;
+  } 
+  
+  .section .margen > .flex3 {
+      margin-bottom: initial
+  }    
+   
+} 
+      
+@media only screen and (min-width: 1200px) { 
+  
+  .flex4, .sub4 { width: calc(25% - 12.5px); }
+  
+  .flex5, .sub5 { width: calc(20% - 15.35px) }
+
+  .section .margen > .flex5:nth-last-of-type(2) {
+    margin-bottom: initial;
+  }   
+    
+  .section .margen > .flex5 {
+    margin-bottom: initial;
+  } 
+ 
+  #header nav {
+    position: relative;
+    width: 49.5%;
+    display: flex; /*none*/
+    align-items: center;
+    height: 100%;
+  }
+  
+  #header .ul-nav {
+    width: 100%; /*of parent .nav*/
+  }
+
+  #header .menu { /*.ul-nav > li */
+    position: relative;
+    cursor: pointer;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+  }  
+  
+  #header .menu:hover {
+     
+  }
+  
+  #header .menu > a {
+    width: 100%;
+    text-align: center;
+    color: #333;
+    transition: all .5s ease;
+  }
+    
+  #header .menu:hover > a {
+     font-weight: bold;
+  }
+  
+  #header .menu:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #header .menu .fa-caret-down {  
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: #fff;
+  }
+  
+  #header .submenu {
+    position: absolute;
+    min-width: 200px;
+    background-color: #fff;
+    transition: all .1s ease;
+    top: 70px;
+    box-shadow: 3px 3px 5px #333; 
+    visibility: hidden;
+    opacity: 0;
+    padding: 3px;
+  }
+  
+  #header .submenu .fa-caret-up {
+    color: #fff;
+    position: absolute;
+    top: -18px;
+    font-size: 1.5em;;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #header .submenu li {
+    padding: 5px;
+    transition: all .1s ease;
+    text-align: left;
+ 
+  }
+  
+  #header .submenu li:hover {
+    background-color: #327699; /*light greenblue*/
+  }
+  
+  #header .submenu a {
+    color: #333;
+    transition: all .1s ease; 
+    font-size: .9em;
+  }
+  
+  #header .submenu li:hover a {
+    color: #fff;
+  }
+  
+  /*Excel last sub-menu*/
+  #header .submenu li:not(:nth-last-of-type(1)) {
+       border-bottom: 1px solid #ddd;
+  }
+  
+  
+/*_____________________________________*/
+  
+  #boton_menu, #menu_movil {
+    display: none;
+  }
+    
+  .margen {
+    width: 80%;
+    max-width: 1380px;
+  }
+    
+}

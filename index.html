@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="language" content="spanish">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="view/css/temp.css">
+        <link rel="stylesheet" type="text/css" href="view/css/main.css">
+        <link rel="stylesheet" type="text/css" href="view/css/inicio.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+        <link rel="shortcut icon" type="image/x-icon" href="view/images/Isotipo.png"/>
+        <script src="https://kit.fontawesome.com/700fcbf937.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!--11/29/2025-->
+	      <title>Inicio - TempSite 25.1 Nov/29/25</title>
+    </head>
+    <body>
+<!--ENCABEZADO DE LA PÁGINA-->
+        <header id="header">
+            <div class="margen flexbox">
+               <div id="logo"><a href="../"><img src="view/images/logo.png"></a></div>
+               <nav class="nav">
+                   <ul class="ul-nav flexbox">
+                      <li class="menu">
+                          <a href="../">Inicio</a>
+                          <!--<i class='fas fa-caret-down'></i>
+                          <ul class="submenu">
+                              <li><a href="">sub-menu</a></li>
+                              <li><a href="">sub-menu</a></li>
+                              <li><a href="">sub-menu</a></li>
+                              <i class='fas fa-caret-up'></i>
+                          </ul>-->
+                      </li>
+                      <li class="menu"><a href="../">Nosotros</a></li> <!--href="../folder">-->
+                      <li class="menu"><a href="../">Servicios</a></li>
+                      <li class="menu"><a href="../">Contacto</a></li>
+                   </ul> 
+               </nav>
+               <label for="chbx" id="boton_menu"><i class="fas fa-grip-lines"></i></label>
+            </div>
+        </header>
+<!--MENÚ PARA DISPOSITIVOS MÓVIES-->
+        <input type="checkbox" id="chbx">
+        <nav id="menu_movil">
+            <a href="../">Inicio</a>
+            <a href="../">Nosotros</a>
+            <a href="../">Servicios</a>
+            <a href="../">Contacto</a>
+        </nav>
+<!--wrap es el div que envuelve todas las secciones-->        
+        <div id="wrap">
+              <div id="section_1" class="section flexbox ">
+                  <div class="margen flexbox">
+                    <div class="div_img"><img src="view/images/imagen4.png"></div>
+                    <p>¡Página en construcción!</p>
+                    <p>Muy pronto estará disponible ⏳</p>
+                                                                
+                  </div><!--fin clase margen-->
+              </div> <!-- fin de sección-->
+              <footer id="footer" class="flexbox">
+                  <div class="margen flexbox">
+                      <div class="flex flex3">
+                             <h3>Opciones en sitio</h3>
+                             <ul>
+                                <li><a href="../">Inicio</a></li>
+                                <li><a href="../">Nosotros</a></li>
+                                <li><a href="../">Servicios</a></li>
+                                <li><a href="../">Contacto</a></li>
+                             </ul>                             
+                        </div>
+                        <div class="flex flex3">
+                            <h3>Contáctanos</h3>
+                            <ul>
+                               <li><a href="tel:477-444-6663">477-123-4567</a></li>
+                               <li><a href="mailto:pruebas@consperlab.com">Escríbenos<i class="fas fa-envelope-open"></i></a></li>
+                            </ul>
+                          <div class="div_icons">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i></a> 
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>                         
+                        </div>
+                        </div>
+                        <div class="flex flex3">
+                            <h3>Consper Software Lab</h3>
+                            <div class="div_img" data-aos="fade-up"><img src="view/images/logo_white.png"></div>
+                            <p class="p_rights">&copy 2025 Todos los derechos reservados</p>
+                        </div>
+                 </div><!--fin clase margen-->
+                 <div id="whats"><a href='http://wa.me/524771234567'><i class="fa fa-whatsapp"></i></a></div>
+              </footer> <!-- fin de sección-->
+        </div> <!--fin wrap-->
+        <script src="controller/template.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>        
+    </body> <!--fin body-->
+</html>
